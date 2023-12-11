@@ -47,7 +47,15 @@ prompt = """
 입력 데이터에서 '#'로 시작하는 문장은 제목에 해당해.
 '-'로 시작하고 ':'로 끝나는 문장은 제목이야.
 문장에 '|'가 두 개 이상있다면 문장의 처음부터 첫번쩨 '|'까지가 제목이야 
-문장에 ':'가 하나 이상 있다면 처음부터 첫번쩨 ':'까지가 제목이야
+문장에 ':'가 하나 이상 있다면 문장의 처음부터 첫번쩨 ':'까지가 제목이야
 """
+result = complete_prompt_with_data(prompt, contents, 1, 8500)
+print(result)
+
+prompt = """
+당신은 카카오톡 채널에 대한 질문에 답해주는 assistant입니다.
+다음 데이터를 활용해 질문에 답변하세요.
+"""
+contents = result 
 result = complete_prompt_with_data(prompt, contents, 1, 8500)
 print(result)
