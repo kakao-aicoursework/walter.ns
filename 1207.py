@@ -59,3 +59,24 @@ prompt = """
 contents = result 
 result = complete_prompt_with_data(prompt, contents, 1, 8500)
 print(result)
+
+
+def complete_prompt(prompt, temperature=1, max_tokens=4293):
+  messages=[
+            {
+                "role": "user",
+                "content": prompt
+            }
+        ]
+  return complete_message(messages, temperature, max_tokens)
+
+def on_send():
+    
+    user_input = input("User : ")
+    if user_input.lower() == "quit":
+        exit()
+    response = complete_prompt(user_input)
+    print("GPT : ", response)
+
+while True:
+    on_send()    
