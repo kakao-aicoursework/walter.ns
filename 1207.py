@@ -1,6 +1,5 @@
 import openai
 import json
-from google.colab import drive
 
 def complete_message(messages, temperature=1, max_tokens=4293):
 
@@ -39,11 +38,6 @@ def read_contents(file_path) :
   except Exception as e:
       print(f"An error occurred: {e}")
 
-
-
-drive.mount('/content/drive')
-
-file_path = "/content/drive/MyDrive/datas/kt_c.txt"
 
 file_path = "/content/drive/MyDrive/datas/kt_c.txt"
 contents = read_contents(file_path)
