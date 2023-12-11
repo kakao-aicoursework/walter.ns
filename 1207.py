@@ -70,7 +70,7 @@ def complete_prompt(prompt, temperature=1, max_tokens=4293):
         ]
   return complete_message(messages, temperature, max_tokens)
 
-def on_send():
+def on_chatbot():
     
     user_input = input("User : ")
     if user_input.lower() == "quit":
@@ -79,4 +79,4 @@ def on_send():
     print("GPT : ", response)
 
 while True:
-    on_send()    
+    on_chatbot()    
