@@ -34,8 +34,8 @@ def lambda_handler(event, context):
     
     
     
-    # openai.api_key = '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'
-    openai.api_key = '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'
+    # openai.api_key = 'sk-aaaa'
+    #openai.api_key = 'sk-bbb'
     # response = openai.Completion.create(model=model_to_use, prompt=input_prompt,temperature=0, max_tokens=100, top_p=1,frequency_penalty=0.0, presence_penalty=0.0)
     #response = openai.Completion.create(model=model_to_use, prompt=input_prompt)
     #print(response)
